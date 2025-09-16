@@ -9,7 +9,5 @@ To order a maintenance service, where customers book an appointment for either s
 home cleaning services (dusting).
 
 # Authors
-Kyle Aeron Galang  
-Samar Chughtai 
-Raymond Martin 
+Kyle Aeron Galang, Samar Chughtai, Raymond Martin 
 
