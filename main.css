@@ -1,9 +1,46 @@
-.top{
-    background:whitesmoke;
-    height: 100px;
-    width: 800px;
-    margin-left: 25%;
+/* Header Section */
+header {
+    background-color: teal;
+    padding: 20px;
 }
 .title{
+    text-align: center;
+    font-family: "Gill Sans", sans-serif;
+/* Header Link Section */
+}
+.headernavbox{
+    background-color: #99ccff;
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 20px;
+    border-radius: 10px;
+    border: 5px solid;
+}
+.links{
+    width: 50px;
+    height: 50px;
+    transition: 0.5 ease-in-out;
+}
+
+.links:hover{
+    width: 60px;
+    height: 60px;
+
+}
+
+.linkslabel{
+    text-align: center;
+}
+
+
+
+
+
+/* Footer */
+footer{
+    background: #99ccff;;
+    width: 100%;
     text-align: center;
 }
