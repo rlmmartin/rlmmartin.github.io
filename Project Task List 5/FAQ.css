@@ -1,0 +1,16 @@
+.Contact-form {
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    max-width: 650px;
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    background-color: #efefef;
+}
