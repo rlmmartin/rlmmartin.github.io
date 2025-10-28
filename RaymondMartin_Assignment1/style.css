@@ -1,0 +1,23 @@
+
+.profile-photo {
+  width: 250px;      
+  height: auto;      
+  border-radius: 8px; 
+}
+
+
+body {
+    background-color: rgb(179, 184, 186);
+}
+
+/* so i can center everyting that is in the div in the html */
+.tocentereverything {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
