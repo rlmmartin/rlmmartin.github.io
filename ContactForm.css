@@ -1,0 +1,99 @@
+body {
+  background-color: #efefef;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding-top: 10%;
+}
+
+/* This is the contact form related */
+
+.Contact-form {
+  background-color: white;
+  width: 480px;
+  height: 550px;
+  margin: 0;
+  box-shadow: 5px 5px 10px black;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.Contact-form input {
+  height: 32px;
+  width: 189px;
+  margin: 6px;
+  border: none;
+  border: 1px solid lightgray;
+}
+
+.Contact-form textarea {
+  width: 400px;
+  height: 200px;
+  margin: 6px;
+  border: 1px solid lightgray;
+}
+
+.Contact-form h1 {
+  text-align: left;
+}
+
+/* This is button related */
+.button {
+  display: flex;
+  padding: 10px 10px;
+  margin-top: 10px;
+  font-size: 14px;
+  background-color: #357afc;
+  border: none;
+  color: white;
+}
+
+/* This is the contact info part */
+
+.Contact-info {
+  background-color: #357afc;
+  color: white;
+  width: 385px;
+  height: 550px;
+  margin: 0;
+  box-shadow: 5px 5px 10px black;
+  padding-top: 10px;
+  padding-left: 20px;
+
+  margin-top: -20px;
+  margin-bottom: -20px;
+}
+
+/* This is list related */
+
+.Contact-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Contact-info li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.Contact-info li img {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 15px;
+  padding: 5px;
+}
+
+.Contact-form li span {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.Contact-form li b {
+  color: white;
+}
