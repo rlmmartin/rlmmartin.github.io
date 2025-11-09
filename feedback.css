@@ -1,0 +1,136 @@
+/* raymond martin feedback feature css november 9 */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Container for both left and right panels */
+.feedback-container {
+  display: flex;
+  gap: 20px;
+  background-color: #e6f0ff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* This is for the left info panel */
+.info {
+  flex: 1;
+  background-color: #d9e8ff;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.brand h1 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.brand p {
+  font-size: 13px;
+  color: #333;
+}
+
+.hint {
+  font-size: 13px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.foot-note {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #555;
+}
+
+/* and this is for the right form section */
+.form-area {
+  flex: 2;
+  background-color: #d9e8ff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center; 
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #000;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  color: #000;
+  margin-top: 15px;
+  text-align: center;
+}
+
+input,
+textarea {
+  width: 70%;
+  padding: 8px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  color: #000;
+  font-size: 14px;
+  display: block;
+  margin: 0 auto; 
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* for the star rating */
+.stars {
+  display: flex;
+  justify-content: center; 
+  gap: 7px;
+  margin-top: 5px;
+  font-size: 30px;
+  color: #888787;
+  cursor: pointer;
+}
+
+.star.active {
+  color: #ffb400;
+}
+
+/* For the submit review button */
+button {
+  background-color: #5c6cff;
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  margin-top: 15px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+button:hover {
+  background-color: #7b89ff;
+}

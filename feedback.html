@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KRS Services Feedback</title>
+  <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+  <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+  <div class="feedback-container">
+    <!-- Left info pannel -->
+    <aside class="info">
+      <div class="brand">
+        <img src="images/logo.jpg" alt="KRS Force Logo" class="logo">
+        <h1>KRS Services Feedback</h1>
+        <p>We would love to hear your opinion on how easy it was to navigate our website, and how satisfied you are with our services!</p>
+      </div>
+
+      <div class="hint">
+        <strong>Instructions:</strong>
+        <p>If you look to your right, you will see some fields. Please take the time to fill them out, to the best of your ability.</p>
+        <p>The first field is where you type your email adress.</p>
+        <p>Below that box, you will see some stars. The one furthest to the left means you aren't satisfied. The one to the right means that you are very satisfied. There are 5 stars in total.</p>
+        <p>The last field there is where you can type your comments and suggestions. If you liked or disliked something, or want to suggest improvements, you may do so in that field!</p>
+      </div>
+
+      <div class="foot-note">
+        "The Customer contentment with the quality of our services is what makes us here at KRS Services successful. Your opinion is valued."  
+        - Raymond Martin (CEO)
+      </div>
+    </aside>
+
+    <!-- Right feedback section -->
+    <main class="form-area">
+      <h2>Feedback Section</h2>
+      <p style="font-size:13px;">
+        Your opinion matters and will help us in improving our services.
+        Every comment and rating is meticulously evaluated by both our customer relations executive Mr Samar Chughtai,
+        and the Chief Executive Officer Mr Raymond Martin.
+      </p>
+
+      <form action="#" method="post">
+        <label for="email">Your Email Address</label>
+        <input id="email" name="email" type="email" placeholder="YourEmailHere@yahoo.com">
+
+        <label>Your rating of us</label>
+        <div class="stars">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+
+        <label for="comments">Below is where you type your feedback</label>
+        <textarea id="comments" name="comments" placeholder="What do you think about your overall experience?"></textarea>
+
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </main>
+  </div>
+
+  <!-- slight javascript for the star logic -->
+  <script>
+    const stars = document.querySelectorAll('.star');
+    let rating = 0;
+
+    stars.forEach(star => {
+      star.addEventListener('click', () => {
+        rating = star.dataset.value;
+        stars.forEach(s => s.classList.toggle('active', s.dataset.value <= rating));
+      });
+    });
+  </script>
+</body>
+</html>
