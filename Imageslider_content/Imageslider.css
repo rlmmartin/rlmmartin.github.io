@@ -1,0 +1,47 @@
+#Imageslider {
+  border-radius: 25px;
+  position: relative;
+  width: 100%;
+  max-width: 90%;
+  height: 600px;
+  margin: auto;
+  overflow: hidden;
+  border: 2px solid #0289ff;
+}
+
+
+#Images {
+  display: flex;
+  transition: transform 1.5s ease-in-out;
+}
+
+
+#Images img {
+  width: 100%;
+  height: 600px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+#prev, #next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  font-size: 25px;
+  transform: padding 0.7 ease;
+}
+
+#prev:hover, #next:hover{
+  background-color: #0289ff;
+  cursor: pointer;
+  padding: 13px;
+}
+
+#prev { 
+  left: 50px; 
+}
+#next { 
+  right: 50px; 
+}
+
