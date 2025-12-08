@@ -1,0 +1,292 @@
+/* GLOBAL/RESET STYLES: This just makes sure all browsers start from the same spot (no weird margins/padding) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* THIS FONT IS CRUCIAL FOR THE INTENDED LOOK */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  line-height: 1.6;
+  background-color: #efefef; /* A nice off-white background */
+  color: #333;
+  display: block; 
+  min-height: 100vh;
+}
+
+
+/* --- HEADER STYLES --- */
+.site-header {
+  position: relative;
+  display: flex; 
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #230ebf; 
+  color: white;
+}
+
+.logo-container {
+  z-index: 2; 
+}
+
+.logo-container img {
+  height: 44px;
+}
+
+/* Centering the main links */
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-center ul {
+  display: flex;
+  gap: 25px; 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-center a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-center a:hover {
+  color: #26f926c9; 
+}
+
+/* Right-side dropdowns */
+.nav-right {
+  margin-left: auto; 
+  display: flex;
+  flex-direction: column; 
+  gap: 10px;
+  z-index: 2;
+}
+
+.nav-right .dropdown {
+  position: relative;
+}
+
+.nav-right a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-right a:hover {
+  color: #26f926c9;
+}
+
+/* Styling for the menus that drop down */
+.dropdown-menu {
+  display: none; 
+  position: absolute;
+  background-color: #230ebf;
+  top: 100%;
+  left: 0;
+  min-width: 120px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 4px;
+  z-index: 100;
+  flex-direction: column;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 8px 12px;
+  color: white;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  color: #26f926c9; 
+  background-color: transparent; 
+}
+
+
+/* --- MAIN CONTENT AREA STYLES --- */
+main {
+  padding: 20px;
+  /* Use flex properties to center the feedback box within the main area */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Ensure the main area fills the space between header and footer */
+  min-height: calc(100vh - 150px); 
+}
+
+
+/* --- FOOTER STYLES --- */
+.site-footer {
+  background-color: #ddd;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Social icons styles */
+.social-icons {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons img {
+  width: 48px;
+  height: 48px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.15); 
+}
+
+
+/* --- FEEDBACK FORM SPECIFIC STYLES (To match Image 1 exactly) --- */
+
+/* Container for both the instructions (left) and the form (right) */
+.feedback-container {
+  display: flex;
+  gap: 20px;
+  background-color: #e6f0ff; /* Light blue/gray background */
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin: 20px auto; 
+}
+
+/* Left info panel */
+.info {
+  flex: 1;
+  background-color: #d9e8ff;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 14px; 
+}
+
+/* Logo inside the info panel */
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 5px; 
+}
+
+.brand h1 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.hint {
+  font-size: 13px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.foot-note {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #555;
+}
+
+/* Right form section */
+.form-area {
+  flex: 2;
+  background-color: #d9e8ff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center; 
+}
+
+.form-area h2 {
+  font-size: 20px;
+  margin-bottom: 10px; 
+}
+
+/* Make sure all form elements are centrally aligned */
+.form-area form * {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-area label {
+  display: block;
+  font-size: 13px;
+  color: #000;
+  margin-top: 15px;
+  margin-bottom: 5px; 
+  text-align: center;
+}
+
+input,
+textarea {
+  width: 70%;
+  padding: 8px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  color: #000;
+  font-size: 14px;
+  display: block;
+  margin: 0 auto; 
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Star rating styles */
+.stars {
+  display: flex;
+  justify-content: center; 
+  gap: 7px;
+  margin-top: 5px;
+  font-size: 30px;
+  color: #888787;
+  cursor: pointer;
+}
+
+.star.active {
+  color: #ffb400;
+}
+
+/* Submit button styles */
+.form-area button {
+  background-color: #5c6cff;
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  margin-top: 20px; 
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+.form-area button:hover {
+  background-color: #7b89ff;
+}

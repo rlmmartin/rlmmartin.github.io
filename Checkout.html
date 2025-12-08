@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRS FORCE - Final Checkout</title>
+    <link rel="stylesheet" href="files/CheckOutStyle.css"> 
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo-container">
+            <img src="media/logo.jpg" alt="KRS FORCE Logo">
+        </div>
+
+        <nav class="nav-center">
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Bookings.html">Bookings</a></li>
+                <li><a href="Checkout.html">Checkout</a></li>
+                <li><a href="Faq.html">FAQ</a></li>
+                <li><a href="Feedback.html">Feedback</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <nav class="nav-right">
+            <ul>
+                <li class="dropdown">
+                    <a href="#">Languages</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">French</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Mode</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Dark Mode</a></li>
+                        <li><a href="#">Light Mode</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="unique-checkout-main">
+        <h1>Payment</h1>
+        <p class="paragraph-with-intro">
+            Finalize your booking by completing the secure payment form below.
+        </p>
+        
+        <div class="checkout-container">
+            <div class="payment-form">
+                <h2>Payment Details</h2>
+                <form id="paymentForm">
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" id="cardNumber" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cardName">Name on Card</label>
+                        <input type="text" id="cardName" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group expiry-group">
+                            <label for="cardExpiry">Expiration Date (MM/YY)</label>
+                            <input type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5" required>
+                        </div>
+                        <div class="form-group cvc-group">
+                            <label for="cardCVC">CVC</label>
+                            <input type="text" id="cardCVC" placeholder="XXX" maxlength="4" required>
+                        </div>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the <a href="#">Terms and Conditions</a></label>
+                    </div>
+
+                    <button type="submit" id="payButton">Pay Now</button>
+                </form>
+            </div>
+            
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div class="summary-item">
+                    <span>Service:</span>
+                    <span id="summaryService">Snow Removal (Driveway)</span>
+                </div>
+                <div class="summary-item">
+                    <span>Date & Time:</span>
+                    <span id="summaryDateTime">Dec 15, 2025 at 10:00 AM</span>
+                </div>
+                <div class="summary-total-box">
+                    <span>Total Amount Due:</span>
+                    <span id="summaryTotal">$3.00</span>
+                </div>
+                <p class="summary-note">The final price includes all service fees and taxes.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; KRS 2025</p>
+        <p>Follow us on our social media accounts</p>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                <img src="media/instagram.png" alt="Instagram Logo">
+            </a>
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                <img src="media/facebook.png" alt="Facebook Logo">
+            </a>
+            <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+                <img src="media/youtube.png" alt="YouTube Logo">
+            </a>
+        </div>
+    </footer>
+
+    <script src="files/CheckOutJava.js"></script> 
+</body>
+</html>
+
+

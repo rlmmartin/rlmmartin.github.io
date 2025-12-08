@@ -1,0 +1,70 @@
+/* Service Main Content */
+.service-content{
+  justify-content: center;
+  display: flex;
+  gap: 150px ;
+  margin: 0 auto;
+}
+/* Home Maintenance */
+.home-maintenance-content h3{
+  border-bottom: 3px solid #230ebf; 
+}
+.home-maintenance-content img{
+  width: 250px;
+  height: 250px;
+}
+.home-maintenance-content{
+  max-width: 400px;
+  border-radius: 20px;
+  border: 5px solid #230ebf;
+  padding: 15px 15px;
+  transition: border 0.4 ease;
+}
+/* Snow Removal Content */
+.snow-removal-content h3{
+  border-bottom: 3px solid #230ebf; 
+}
+.snow-removal-content{
+  max-width: 400px;
+  border-radius: 20px;
+  border: 5px solid #230ebf;
+  padding: 15px 15px;
+}
+.snow-removal-content img{
+  width: 250px;
+  height: 250px;
+}
+/* Landscape Removal Content */
+.landscape-content h3{
+  border-bottom: 3px solid #230ebf; 
+}
+.landscape-content{
+  max-width: 400px;
+  border-radius: 20px;
+  border: 5px solid #230ebf;
+  padding: 15px 15px;
+}
+.landscape-content img{
+  width: 250px;
+  height: 250px;
+}
+
+/* Service Button */
+.service-button{
+  margin-top: 100px;
+  margin-bottom: 50px;
+  background-color: green;
+  width: 200px;
+  height: 100px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 3px 5px #000000;
+  font-weight: 700;
+}
+.service-button {
+  font-size: 20px;
+}
+.service-button:hover{
+  background-color: #2ca72c;
+  cursor: pointer;
+}
