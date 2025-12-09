@@ -1,0 +1,469 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.dark-mode {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #1b1736;
+  color: #8b5cf6;
+}
+
+body.dark-mode .site-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #230ebf;
+  color: white;
+}
+
+body.dark-mode .logo-container {
+  z-index: 2;
+}
+
+body.dark-mode .logo-container img {
+  height: 44px;
+}
+
+body.dark-mode .nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+body.dark-mode .nav-center ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body.dark-mode .nav-center a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .nav-center a:hover {
+  color: #26f926c9;
+}
+
+body.dark-mode .nav-right {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 2;
+}
+
+body.dark-mode .nav-right .dropdown {
+  position: relative;
+}
+
+body.dark-mode .nav-right a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .nav-right a:hover {
+  color: #26f926c9;
+}
+
+body.dark-mode .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #230ebf;
+  top: 100%;
+  left: 0;
+  min-width: 120px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 4px;
+  z-index: 100;
+  flex-direction: column;
+}
+
+body.dark-mode .dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+body.dark-mode .dropdown-menu li a {
+  display: block;
+  padding: 8px 12px;
+  color: white;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .dropdown-menu li a:hover {
+  color: #26f926c9;
+  background-color: transparent;
+}
+
+body.dark-mode main {
+  padding: 20px;
+  text-align: center;
+}
+
+body.dark-mode h1 {
+  color: white;
+}
+
+body.dark-mode h2 {
+  color: white;
+}
+
+body.dark-mode p {
+  color: white;
+}
+
+body.dark-mode .paragraph-with-intro {
+  margin-bottom: 70px;
+}
+
+body.dark-mode .the-service-specifier-container {
+  max-width: 900px;
+  margin: 30px auto;
+  border: 1px solid #6b46c1;
+  border-radius: 8px;
+  background-color: #2a1f4f;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+body.dark-mode .the-service-specifier-container h3 {
+  color: #8b5cf6;
+  margin-bottom: 20px;
+}
+
+body.dark-mode .the-service-options-wrapper {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+body.dark-mode .the-service-option {
+  flex: 1;
+  background-color: #1b1736;
+  border: 2px solid #6b46c1;
+  border-radius: 10px;
+  padding: 14px 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 0;
+}
+
+body.dark-mode .the-service-option h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.1em;
+  color: white;
+}
+
+body.dark-mode .the-service-option:hover {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+}
+
+body.dark-mode .option-dropdown {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  padding-top: 0;
+  text-align: left;
+}
+
+body.dark-mode .the-service-option:hover .option-dropdown {
+  max-height: 200px;
+  padding-top: 10px;
+  border-top: 1px dashed #6b46c1;
+}
+
+body.dark-mode .option-dropdown label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+  cursor: pointer;
+  color: white;
+}
+
+body.dark-mode .the-first-confirm-button {
+  display: block;
+  margin: 30px auto 0 auto;
+  padding: 12px 30px;
+  background-color: #8b5cf6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode .the-first-confirm-button:hover {
+  background-color: #a855f7;
+}
+
+body.dark-mode .calendar-booking-section {
+  padding-top: 20px;
+  text-align: center;
+}
+
+body.dark-mode .calendar-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 15px;
+  border: 1px solid #6b46c1;
+  border-radius: 8px;
+  background-color: #2a1f4f;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+body.dark-mode .calendar-header h3 {
+  margin: 0;
+  color: #8b5cf6;
+}
+
+body.dark-mode .calendar-header button {
+  background: none;
+  border: 1px solid #6b46c1;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1.1em;
+  background-color: #1b1736;
+  color: white;
+}
+
+body.dark-mode .calendar-header button:hover {
+  background-color: #6b46c1;
+}
+
+body.dark-mode .calendar-days-header,
+body.dark-mode .calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+body.dark-mode .calendar-days-header span {
+  font-weight: bold;
+  color: #8b5cf6;
+  padding: 8px 0;
+}
+
+body.dark-mode .date-cell {
+  padding: 5px;
+  margin: 1px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 0.9em;
+  color: white;
+}
+
+body.dark-mode .date-cell:hover {
+  background-color: #3d2f5f;
+}
+
+body.dark-mode .date-num {
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+body.dark-mode .price-tag {
+  font-size: 0.8em;
+  font-weight: bold;
+  padding: 2px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+body.dark-mode .weekend-price {
+  background-color: #22543d;
+  color: #9ae6b4;
+  border: 1px solid #9ae6b4;
+}
+
+body.dark-mode .weekday-price {
+  background-color: #3d2f5f;
+  color: #8b5cf6;
+  border: 1px solid #8b5cf6;
+}
+
+body.dark-mode .date-cell.selected {
+  background-color: #8b5cf6;
+  color: white;
+}
+
+body.dark-mode .date-cell.selected .price-tag {
+  background-color: white;
+  color: #8b5cf6;
+  border: none;
+}
+
+body.dark-mode .date-cell.past-date {
+  cursor: not-allowed;
+  background-color: #2a1f4f;
+  color: #6b46c1;
+}
+
+body.dark-mode #confirmDateButton {
+  display: block;
+  margin: 30px auto 0 auto;
+  padding: 12px 30px;
+  background-color: #8b5cf6;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+body.dark-mode #confirmDateButton:hover {
+  background-color: #a855f7;
+}
+
+body.dark-mode .time-selection-section {
+  padding-top: 20px;
+  text-align: center;
+}
+
+body.dark-mode .time-slider-container {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #2a1f4f;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .time-slider-container label {
+  display: block;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #8b5cf6;
+}
+
+body.dark-mode #selectedTimeDisplay {
+  display: block;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #8b5cf6;
+  margin-bottom: 20px;
+}
+
+body.dark-mode #timeSlider {
+  width: 90%;
+  margin: 10px 0;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 10px;
+  background: #6b46c1;
+  outline: none;
+  border-radius: 5px;
+}
+
+body.dark-mode #timeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #8b5cf6;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode #timeSlider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #8b5cf6;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .slider-labels {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: white;
+}
+
+body.dark-mode #confirmTimeButton {
+  display: block;
+  margin: 30px auto 0 auto;
+  padding: 12px 30px;
+  background-color: #8b5cf6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+body.dark-mode #confirmTimeButton:hover {
+  background-color: #a855f7;
+}
+
+body.dark-mode hr {
+  border-color: #6b46c1;
+}
+
+body.dark-mode .site-footer {
+  background-color: #ddd;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.social-icons {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons img {
+  width: 48px;
+  height: 48px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.15);
+}

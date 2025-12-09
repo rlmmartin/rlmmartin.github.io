@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.dark-mode {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #1b1736;
+  color: #8b5cf6;
+}
+
+body.dark-mode .site-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #230ebf;
+  color: white;
+}
+
+body.dark-mode .logo-container {
+  z-index: 2;
+}
+
+body.dark-mode .logo-container img {
+  height: 44px;
+}
+
+body.dark-mode .nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+body.dark-mode .nav-center ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body.dark-mode .nav-center a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .nav-center a:hover {
+  color: #26f926c9;
+}
+
+body.dark-mode .nav-right {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column; 
+  gap: 10px;
+  z-index: 2;
+}
+
+body.dark-mode .nav-right .dropdown {
+  position: relative;
+}
+
+body.dark-mode .nav-right a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .nav-right a:hover {
+  color: #26f926c9;
+}
+
+body.dark-mode .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #230ebf;
+  top: 100%;
+  left: 0;
+  min-width: 120px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 4px;
+  z-index: 100;
+  flex-direction: column;
+}
+
+body.dark-mode .dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+body.dark-mode .dropdown-menu li a {
+  display: block;
+  padding: 8px 12px;
+  color: white;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .dropdown-menu li a:hover {
+  color: #26f926c9; 
+  background-color: transparent; 
+}
+
+body.dark-mode main {
+  padding: 20px;
+  text-align: center;
+}
+
+body.dark-mode .site-footer {
+  background-color: #ddd;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.social-icons {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons img {
+  width: 48px;
+  height: 48px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.15);
+}
+
+body.dark-mode .service-content {
+  justify-content: center;
+  display: flex;
+  gap: 150px;
+  margin: 0 auto;
+}
+
+body.dark-mode .home-maintenance-content h3 {
+  border-bottom: 3px solid #8b5cf6;
+  color: white;
+}
+
+body.dark-mode .home-maintenance-content img {
+  width: 250px;
+  height: 250px;
+}
+
+body.dark-mode .home-maintenance-content {
+  max-width: 400px;
+  border-radius: 20px;
+  border: 5px solid #8b5cf6;
+  padding: 15px 15px;
+  transition: border 0.4s ease;
+  background-color: #2a1f4f;
+}
+
+body.dark-mode .home-maintenance-content p {
+  color: white;
+}
+
+body.dark-mode .snow-removal-content h3 {
+  border-bottom: 3px solid #8b5cf6;
+  color: white;
+}
+
+body.dark-mode .snow-removal-content {
+  max-width: 400px;
+  border-radius: 20px;
+  border: 5px solid #8b5cf6;
+  padding: 15px 15px;
+  background-color: #2a1f4f;
+}
+
+body.dark-mode .snow-removal-content img {
+  width: 250px;
+  height: 250px;
+}
+
+body.dark-mode .snow-removal-content p {
+  color: white;
+}
+
+body.dark-mode .landscape-content h3 {
+  border-bottom: 3px solid #8b5cf6;
+  color: white;
+}
+
+body.dark-mode .landscape-content {
+  max-width: 400px;
+  border-radius: 20px;
+  border: 5px solid #8b5cf6;
+  padding: 15px 15px;
+  background-color: #2a1f4f;
+}
+
+body.dark-mode .landscape-content img {
+  width: 250px;
+  height: 250px;
+}
+
+body.dark-mode .landscape-content p {
+  color: white;
+}
+
+body.dark-mode .service-button {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  background-color: #8b5cf6;
+  width: 200px;
+  height: 100px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 3px 5px rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode .service-button:hover {
+  background-color: #a855f7;
+}
+
+body.dark-mode h1 {
+  color: white;
+}

@@ -6,6 +6,8 @@
   <title>KRS FORCE</title>
   <link rel="stylesheet" href="Imageslider_content/Imageslider.css">
   <link rel="stylesheet" href="files/HomeStyle.css"> 
+  <link rel="stylesheet" href="styles/DarkToggle.css">
+
   <script src="files/Translate.js"></script>
 </head>
 <body>
@@ -41,12 +43,12 @@
         <li class="dropdown">
           <a href="#" data-translate="mode">Mode</a>
           <ul class="dropdown-menu">
-            <li><a href="#" data-translate="darkmode">Dark Mode</a></li>
-            <li><a href="#" data-translate="lightmode">Light Mode</a></li>
+            <li><a href="#" id="darkMode" data-translate="darkMode">Dark Mode</a></li>
+            <li><a href="#" id="lightMode" data-translate="lightmode">Light Mode</a></li>
           </ul>
         </li>
       </ul>
-    </nav>
+    </nav>        
   </header>
 
   <main>
@@ -96,13 +98,13 @@
       <div class="services-left-side-text">
         <h3 data-translate="servicesheader">Check Out Our Services</h3>
         <p data-translate="servicesdesc">Would you like to see the services that we offer in more detail?</p>
-        <button class="services-btn" data-translate="viewservices">View Services</button>
+        <button onclick="window.location.href='Services.html'" class="services-btn" data-translate="viewservices">View Services</button>
       </div>
 
       <div class="booking-right-side-text">
         <h3 data-translate="bookingheader">Interested in Booking Now?</h3>
         <p data-translate="bookingdesc">Booking is easy like counting to 3! We guarantee that you will be satisfied!</p>
-        <button class="booking-btn" data-translate="booknow">Book Now</button>
+        <button onclick="window.location.href='Bookings.html'" class="booking-btn" data-translate="booknow">Book Now</button>
       </div>
     </section>
   </main>
@@ -124,6 +126,7 @@
     </div>
   </footer>
 
-  <script src="files/java.js"></script> 
+  <script src="files/java.js"></script>
+  <script src="files/darkmode.js"></script>
 </body>
 </html>
