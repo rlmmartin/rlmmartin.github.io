@@ -11,7 +11,7 @@ body {
   color: #333;
 }
 
-/* ------- HEADER STYLES --------- */
+/* ------- HEADER STYLES (Unchanged) --------- */
 .site-header {
   position: relative;
   display: flex;
@@ -121,6 +121,7 @@ body {
 
 
 
+
 /* --------------------- so everythin after is as it relates to the booking page itself------------------------- */
 main {
   padding: 20px;
@@ -185,6 +186,13 @@ main {
   box-shadow: 0 0 10px rgba(38, 249, 38, 0.5);
 }
 
+/* New style: Highlights the selected service option */
+.the-service-option.selected {
+    border-color: #230ebf; 
+    background-color: #e6f0ff; /* Light blue background for emphasis */
+    box-shadow: 0 0 15px rgba(35, 14, 191, 0.4);
+}
+
 .option-dropdown {
   max-height: 0; 
   overflow: hidden;
@@ -223,6 +231,8 @@ main {
 .the-first-confirm-button:hover {
   background-color: #078e2b;
 }
+
+
 
 
 
@@ -365,6 +375,7 @@ main {
 
 
 
+
 /* ------------------and this is for step 3----------------- */
 .time-selection-section {
   padding-top: 20px;
@@ -463,7 +474,7 @@ main {
 
 
 
-/* ----------------------------------- FOOTER STYLES ----------------------------- */
+/* ----------------------------------- FOOTER STYLES (Unchanged) ----------------------------- */
 .site-footer {
   background-color: #ddd;
   text-align: center;
@@ -488,3 +499,4 @@ main {
 .social-icons img:hover {
   transform: scale(1.15);
 }
+

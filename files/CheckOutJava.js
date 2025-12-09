@@ -1,6 +1,81 @@
-// --- JAVASCRIPT FOR CHECKOUT PAGE ---
-
 document.addEventListener('DOMContentLoaded', () => {
+
+    // --- References to Order Summary Elements ---
+    const summaryService = document.getElementById('summaryService');
+    const summaryDateTime = document.getElementById('summaryDateTime');
+    const summaryTotal = document.getElementById('summaryTotal');
+
+    /*
+     * Retrieves booking data from localStorage and populates the Order Summary section.
+     */
+    function populateOrderSummary() {
+        const mainService = localStorage.getItem('booking_main_service');
+        const subServicesJson = localStorage.getItem('booking_sub_services');
+        const date = localStorage.getItem('booking_date');
+        const time = localStorage.getItem('booking_time');
+        const price = localStorage.getItem('booking_date_price'); // Price from calendar (Day Rate)
+
+        // 1. Validate if booking data exists
+        if (!mainService || !date || !time || !price) {
+            // This happens if the user navigates directly to Checkout without booking first
+            summaryService.textContent = 'No booking found. Please book a service first.';
+            summaryDateTime.textContent = '';
+            summaryTotal.textContent = '$0.00';
+            
+           
+            // alert('Your booking session has expired or no services were selected. Redirecting to bookings page.');
+           
+            return;
+        }
+
+        // 2. Format Service Details
+        let serviceDetails = mainService;
+        if (subServicesJson) {
+            try {
+                const subServices = JSON.parse(subServicesJson);
+                if (subServices.length > 0) {
+                    serviceDetails += ` (${subServices.join(', ')})`;
+                }
+            } catch (e) {
+                console.error("Error parsing sub-services JSON:", e);
+            }
+        }
+
+        // 3. Format Date and Time
+        // The date from localStorage is a full string (e.g., "Tue Dec 16 2025"). We need to clean it up.
+        // We'll format it to something like: "December 16, 2025 at 1:00 PM"
+        let formattedDate = '';
+        try {
+            // Date string parsing is complex, but the toDateString format is usually robust
+            const dateObj = new Date(date);
+            formattedDate = dateObj.toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+        } catch (e) {
+             formattedDate = date; // Fallback to raw string
+        }
+        const formattedDateTime = `${formattedDate} at ${time}`;
+
+
+        // 4. Update the DOM elements
+        summaryService.textContent = serviceDetails;
+        summaryDateTime.textContent = formattedDateTime;
+        summaryTotal.textContent = `$${parseFloat(price).toFixed(2)}`;
+        
+        console.log('Order Summary populated successfully.');
+    }
+
+    // Call the function to populate the summary immediately on load
+    populateOrderSummary();
+    
+
+
+    // --- PAYMENT FORM LOGIC (Card formatting and Validation) ---
+
+
+
     const paymentForm = document.getElementById('paymentForm');
     const cardNumberInput = document.getElementById('cardNumber');
     const cardExpiryInput = document.getElementById('cardExpiry');
@@ -70,9 +145,24 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-       
+        // If validation passes:
+        
+        // ** Step 1: Clear the Booking Data (Optional but recommended for single-use booking) **
+        localStorage.removeItem('booking_main_service');
+        localStorage.removeItem('booking_sub_services');
+        localStorage.removeItem('booking_date');
+        localStorage.removeItem('booking_time');
+        localStorage.removeItem('booking_date_price');
+
+
+        // ** Step 2: Confirmation Alert and Reset **
         alert('Payment Successful! Your booking is confirmed.\n\nThank you for choosing us.');
         paymentForm.reset();
+        
+        // ** Step 3: Redirect or Update Summary **
+        // Since booking data is cleared, we re-run the summary function to show 'No booking found'.
+        populateOrderSummary(); 
+
+
     });
 });
-

@@ -10,13 +10,11 @@
 </head>
 <body>
   <header class="site-header">
-    <!-- Logo left -->
-    <div class="logo-container">
+        <div class="logo-container">
       <img src="media/logo.jpg" alt="KRS FORCE Logo">
     </div>
 
-    <!-- Centered main nav links -->
-    <nav class="nav-center">
+        <nav class="nav-center">
       <ul>
         <li><a href="Home.html" data-translate="home">Home</a></li>
         <li><a href="Services.html" data-translate="services">Services</a></li>
@@ -28,8 +26,7 @@
       </ul>
     </nav>
 
-    <!-- Right dropdowns -->
-    <nav class="nav-right">
+        <nav class="nav-right">
       <ul>
         <li class="dropdown">
           <a href="#" data-translate="languages">Languages</a>
@@ -60,7 +57,7 @@
 
   <h2 data-translate="step1_title">Step 1: Service Specifier</h2>
   <p data-translate="step1_desc">
-    Please select the service that you want, then check the boxes to specify.
+    Please select the **main service** that you want, then check the boxes to specify.
   </p>
 
   <div class="the-service-specifier-container" id="step1">
@@ -68,32 +65,32 @@
 
     <div class="the-service-options-wrapper">
 
-      <div class="the-service-option" id="Snow-Removal">
+            <div class="the-service-option" id="Snow-Removal">
         <h4 data-translate="snow_removal_title">Snow Removal</h4>
-        <div class="option-dropdown">
-          <label><input type="checkbox" name="snow_driveway"> <span data-translate="snow_driveway">Driveway</span></label>
-          <label><input type="checkbox" name="snow_sidewalk"> <span data-translate="snow_sidewalk">Sidewalk</span></label>
+                <div class="option-dropdown" data-service-type="Snow Removal">
+                    <label><input type="checkbox" name="snow_driveway" data-sub-service="Driveway"> <span data-translate="snow_driveway">Driveway</span></label>
+          <label><input type="checkbox" name="snow_sidewalk" data-sub-service="Sidewalk"> <span data-translate="snow_sidewalk">Sidewalk</span></label>
         </div>
       </div>
 
-      <div class="the-service-option" id="Landscaping">
+            <div class="the-service-option" id="Landscaping">
         <h4 data-translate="landscaping_title">Landscaping</h4>
-        <div class="option-dropdown">
-          <label><input type="checkbox" name="tree_pruning"> <span data-translate="tree_pruning">Tree Pruning</span></label>
-          <label><input type="checkbox" name="land_mowing"> <span data-translate="land_mowing">Lawn Mowing</span></label>
+        <div class="option-dropdown" data-service-type="Landscaping">
+          <label><input type="checkbox" name="tree_pruning" data-sub-service="Tree Pruning"> <span data-translate="tree_pruning">Tree Pruning</span></label>
+          <label><input type="checkbox" name="land_mowing" data-sub-service="Lawn Mowing"> <span data-translate="land_mowing">Lawn Mowing</span></label>
         </div>
       </div>
 
-      <div class="the-service-option" id="cleaning">
+            <div class="the-service-option" id="cleaning">
         <h4 data-translate="cleaning_title">Cleaning Services</h4>
-        <div class="option-dropdown">
-          <label><input type="checkbox" name="dusting"> <span data-translate="dusting">Dusting</span></label>
+        <div class="option-dropdown" data-service-type="Cleaning Services">
+          <label><input type="checkbox" name="dusting" data-sub-service="Dusting"> <span data-translate="dusting">Dusting</span></label>
         </div>
       </div>
 
     </div>
   </div>
-  <button class="the-first-confirm-button" data-translate="confirm_step1">Confirm Step 1</button>
+  <button class="the-first-confirm-button" id="confirmServiceButton" data-translate="confirm_step1">Confirm Step 1</button>
 
   <div class="calendar-booking-section" id="step2">
     <hr style="margin-top: 50px; margin-bottom: 50px;">
