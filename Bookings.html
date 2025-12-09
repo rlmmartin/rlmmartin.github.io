@@ -5,138 +5,149 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KRS FORCE</title>
   <link rel="stylesheet" href="files/BookingPage.css"> 
+  <script src="files/Translate.js"></script>
 </head>
 <body>
   <header class="site-header">
+    <!-- Logo left -->
     <div class="logo-container">
       <img src="media/logo.jpg" alt="KRS FORCE Logo">
     </div>
 
+    <!-- Centered main nav links -->
     <nav class="nav-center">
       <ul>
-        <li><a href="Home.html">Home</a></li>
-        <li><a href="Services.html">Services</a></li>
-        <li><a href="Bookings.html">Bookings</a></li>
-        <li><a href="Checkout.html">Checkout</a></li>
-        <li><a href="Faq.html">FAQ</a></li>
-        <li><a href="Feedback.html">Feedback</a></li>
-        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="Home.html" data-translate="home">Home</a></li>
+        <li><a href="Services.html" data-translate="services">Services</a></li>
+        <li><a href="Bookings.html" data-translate="bookings">Bookings</a></li>
+        <li><a href="Checkout.html" data-translate="checkout">Checkout</a></li>
+        <li><a href="Faq.html" data-translate="faq">FAQ</a></li>
+        <li><a href="Feedback.html" data-translate="feedback">Feedback</a></li>
+        <li><a href="Contact.html" data-translate="contact">Contact</a></li>
       </ul>
     </nav>
 
+    <!-- Right dropdowns -->
     <nav class="nav-right">
       <ul>
         <li class="dropdown">
-          <a href="#">Languages</a>
+          <a href="#" data-translate="languages">Languages</a>
           <ul class="dropdown-menu">
-            <li><a href="#">English</a></li>
-            <li><a href="#">French</a></li>
+            <li><a href="#" onclick="setLanguage('en')">English</a></li>
+            <li><a href="#" onclick="setLanguage('fr')">French</a></li>
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#">Mode</a>
+          <a href="#" data-translate="mode">Mode</a>
           <ul class="dropdown-menu">
-            <li><a href="#">Dark Mode</a></li>
-            <li><a href="#">Light Mode</a></li>
+            <li><a href="#" data-translate="darkmode">Dark Mode</a></li>
+            <li><a href="#" data-translate="lightmode">Light Mode</a></li>
           </ul>
         </li>
       </ul>
     </nav>
   </header>
 
+
   <main>
-    <h1>Bookings</h1>
-    <p class="paragraph-with-intro">
-      Welcome to our bookings page! Here is where you will specify the service that you want
-      select the date and the time. Please follow the steps listed bellow
+  <h1 data-translate="bookings_title">Bookings</h1>
+
+  <p class="paragraph-with-intro" data-translate="bookings_intro">
+    Welcome to our bookings page! Here is where you will specify the service that you want,
+    select the date and the time. Please follow the steps listed below.
+  </p>
+
+  <h2 data-translate="step1_title">Step 1: Service Specifier</h2>
+  <p data-translate="step1_desc">
+    Please select the service that you want, then check the boxes to specify.
+  </p>
+
+  <div class="the-service-specifier-container" id="step1">
+    <h3 data-translate="service_specifier">Service Specifier</h3>
+
+    <div class="the-service-options-wrapper">
+
+      <div class="the-service-option" id="Snow-Removal">
+        <h4 data-translate="snow_removal_title">Snow Removal</h4>
+        <div class="option-dropdown">
+          <label><input type="checkbox" name="snow_driveway"> <span data-translate="snow_driveway">Driveway</span></label>
+          <label><input type="checkbox" name="snow_sidewalk"> <span data-translate="snow_sidewalk">Sidewalk</span></label>
+        </div>
+      </div>
+
+      <div class="the-service-option" id="Landscaping">
+        <h4 data-translate="landscaping_title">Landscaping</h4>
+        <div class="option-dropdown">
+          <label><input type="checkbox" name="tree_pruning"> <span data-translate="tree_pruning">Tree Pruning</span></label>
+          <label><input type="checkbox" name="land_mowing"> <span data-translate="land_mowing">Lawn Mowing</span></label>
+        </div>
+      </div>
+
+      <div class="the-service-option" id="cleaning">
+        <h4 data-translate="cleaning_title">Cleaning Services</h4>
+        <div class="option-dropdown">
+          <label><input type="checkbox" name="dusting"> <span data-translate="dusting">Dusting</span></label>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <button class="the-first-confirm-button" data-translate="confirm_step1">Confirm Step 1</button>
+
+  <div class="calendar-booking-section" id="step2">
+    <hr style="margin-top: 50px; margin-bottom: 50px;">
+    <h2 data-translate="step2_title">Step 2: Select Date</h2>
+    <p data-translate="step2_desc">
+      Please select the date you want for the service on the calendar below.
     </p>
 
-    <h2>Step 1: Service Specifier</h2>
-    <p>
-      Please select the service that you want, then check the boxes to specify
+    <div class="calendar-container">
+      <div class="calendar-header">
+        <button id="prevMonthBtn" data-translate="prev_month">Previous</button>
+        <h3 id="currentMonthYear"></h3>
+        <button id="nextMonthBtn" data-translate="next_month">Next</button>
+      </div>
+
+      <div class="calendar-days-header">
+        <span data-translate="sun">Sun</span>
+        <span data-translate="mon">Mon</span>
+        <span data-translate="tue">Tue</span>
+        <span data-translate="wed">Wed</span>
+        <span data-translate="thu">Thu</span>
+        <span data-translate="fri">Fri</span>
+        <span data-translate="sat">Sat</span>
+      </div>
+
+      <div class="calendar-grid" id="calendarGrid"></div>
+    </div>
+
+    <button class="next-step-btn" id="confirmDateButton" data-translate="confirm_step2">Confirm Step 2</button>
+  </div>
+
+  <div class="time-selection-section" id="step3">
+    <hr style="margin-top: 50px; margin-bottom: 50px;">
+    <h2 data-translate="step3_title">Step 3: Select Time</h2>
+    <p data-translate="step3_desc">
+      Please select your preferred time slot. Available times are from 9 AM to 5 PM.
     </p>
 
-    <div class="the-service-specifier-container" id="step1">
-      <h3>Service Specifier</h3>
-
-      <div class="the-service-options-wrapper">
-
-        <div class="the-service-option" id="Snow-Removal">
-          <h4>Snow Removal</h4>
-          <div class="option-dropdown">
-            <label><input type="checkbox" name="snow_driveway"> Driveway</label>
-            <label><input type="checkbox" name="snow_sidewalk"> Sidewalk</label>
-          </div>
-        </div>
-
-        <div class="the-service-option" id="Landscaping">
-          <h4>Landscaping</h4>
-          <div class="option-dropdown">
-            <label><input type="checkbox" name="tree_pruning"> Tree Pruning</label>
-            <label><input type="checkbox" name="land_mowing"> Lawn Mowing</label>
-          </div>
-        </div>
-
-        <div class="the-service-option" id="cleaning">
-          <h4>Cleaning Services</h4>
-          <div class="option-dropdown">
-            <label><input type="checkbox" name="dusting"> Dusting</label>
-          </div>
-        </div>
-
+    <div class="time-slider-container">
+      <label for="timeSlider" data-translate="selected_time_slot">Selected Time Slot:</label>
+      <span id="selectedTimeDisplay">9:00 AM</span>
+      <input type="range" id="timeSlider" min="9" max="17" value="9" step="1">
+      <div class="slider-labels">
+        <span data-translate="start_time">9 AM</span>
+        <span data-translate="end_time">5 PM</span>
       </div>
     </div>
-    <button class="the-first-confirm-button">Confirm Step 1</button>
 
-    <div class="calendar-booking-section" id="step2">
-      <hr style="margin-top: 50px; margin-bottom: 50px;">
-      <h2>Step 2: Select Date</h2>
-      <p>
-        Please select the date you want for the service on the calendar below.
-      </p>
-      
-      <div class="calendar-container">
-        <div class="calendar-header">
-          <button id="prevMonthBtn">Previous</button>
-          <h3 id="currentMonthYear"></h3>
-          <button id="nextMonthBtn">Next</button>
-        </div>
-        
-        <div class="calendar-days-header">
-          <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
-        </div>
-
-        <div class="calendar-grid" id="calendarGrid">
-        </div>
-      </div>
-
-      <button class="next-step-btn" id="confirmDateButton">Confirm Step 2</button>
-    </div>
-
-    <div class="time-selection-section" id="step3">
-      <hr style="margin-top: 50px; margin-bottom: 50px;">
-      <h2>Step 3: Select Time</h2>
-      <p>
-        Please select your preferred time slot. Available times are from 9 AM to 5 PM.
-      </p>
-
-      <div class="time-slider-container">
-        <label for="timeSlider">Selected Time Slot:</label>
-        <span id="selectedTimeDisplay">9:00 AM</span>
-        <input type="range" id="timeSlider" min="9" max="17" value="9" step="1">
-        <div class="slider-labels">
-          <span>9 AM</span>
-          <span>5 PM</span>
-        </div>
-      </div>
-
-      <button class="next-step-btn" id="confirmTimeButton">Confirm Booking</button>
-    </div>
-  </main>
+    <button class="next-step-btn" id="confirmTimeButton" data-translate="confirm_booking">Confirm Booking</button>
+  </div>
+</main>
 
   <footer class="site-footer">
-    <p>&copy; KRS 2025</p>
-    <p>Follow us on our social media accounts</p>
+    <p data-translate="footer">© KRS 2025</p>
+    <p data-translate="followus">Follow us on our social media accounts</p>
 
     <div class="social-icons">
       <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
@@ -154,5 +165,4 @@
   <script src="files/BookingPage.js"></script> 
 </body>
 </html>
-
 

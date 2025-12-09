@@ -6,9 +6,10 @@
   <title>KRS FORCE</title>
   <link rel="stylesheet" href="styles/kylestyle.css"> 
   <link rel="stylesheet" href="styles/service.css">
+  <script src="files/Translate.js"></script>
 </head>
 <body>
-  <header class="site-header">
+ <header class="site-header">
     <!-- Logo left -->
     <div class="logo-container">
       <img src="media/logo.jpg" alt="KRS FORCE Logo">
@@ -17,13 +18,13 @@
     <!-- Centered main nav links -->
     <nav class="nav-center">
       <ul>
-        <li><a href="Home.html">Home</a></li>
-        <li><a href="Services.html">Services</a></li>
-        <li><a href="Bookings.html">Bookings</a></li>
-        <li><a href="Checkout.html">Checkout</a></li>
-        <li><a href="Faq.html">FAQ</a></li>
-        <li><a href="Feedback.html">Feedback</a></li>
-        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="Home.html" data-translate="home">Home</a></li>
+        <li><a href="Services.html" data-translate="services">Services</a></li>
+        <li><a href="Bookings.html" data-translate="bookings">Bookings</a></li>
+        <li><a href="Checkout.html" data-translate="checkout">Checkout</a></li>
+        <li><a href="Faq.html" data-translate="faq">FAQ</a></li>
+        <li><a href="Feedback.html" data-translate="feedback">Feedback</a></li>
+        <li><a href="Contact.html" data-translate="contact">Contact</a></li>
       </ul>
     </nav>
 
@@ -31,30 +32,29 @@
     <nav class="nav-right">
       <ul>
         <li class="dropdown">
-          <a href="#">Languages</a>
+          <a href="#" data-translate="languages">Languages</a>
           <ul class="dropdown-menu">
-            <li><a href="#">English</a></li>
-            <li><a href="#">French</a></li>
+            <li><a href="#" onclick="setLanguage('en')">English</a></li>
+            <li><a href="#" onclick="setLanguage('fr')">French</a></li>
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#">Mode</a>
+          <a href="#" data-translate="mode">Mode</a>
           <ul class="dropdown-menu">
-            <li><a href="#">Dark Mode</a></li>
-            <li><a href="#">Light Mode</a></li>
+            <li><a href="#" data-translate="darkmode">Dark Mode</a></li>
+            <li><a href="#" data-translate="lightmode">Light Mode</a></li>
           </ul>
         </li>
       </ul>
     </nav>
   </header>
   <main>
-    <h1>Services</h1>
-    <img src="" alt="">
+    <h1 data-translate="services_title">Services</h1>
     <section class="service-content">
       <div class="home-maintenance-content">
-        <h3>Home Maintenance</h3>
+        <h3 data-translate="home_maintenance_title">Home Maintenance</h3>
         <img src="service-icons/Home_Maintance_icon.png" alt="Home_Maintance_icon">
-        <p>Is your furniture dirty and dusty after
+        <p data-translate="home_maintenance_content">Is your furniture dirty and dusty after
           months of doing other important
           activities? No worries, we have you
           covered! We offer dusting services for
@@ -63,41 +63,41 @@
         </p>
       </div>
       <div class="snow-removal-content">
-        <h3>Snow Removal</h3>
+        <h3 data-translate="snow_removal_title">Snow Removal</h3>
         <img src="service-icons/Snowflake_Icon.png" alt="Snowflake_Icon">
-        <p>Tired of working in fringing cold during the cold harsh months?
+        <p data-translate="snow_removal_content">Tired of working in fringing cold during the cold harsh months?
             We are here to help to clear your driveways and sidewalks. 
             We have the best workers to get the task done!
         </p>
       </div>
       <div class="landscape-content">
-        <h3>Landscaping</h3>
+        <h3 data-translate="landscape_title">Landscaping</h3>
         <img src="service-icons/Landscaping_Icon.png" alt="Landscaping_Icon">
-        <p>Having a hard time maintaining your yard's beauty?.
+        <p data-translate="landscape_content">Having a hard time maintaining your yard's beauty?.
           Don't worry, you don't have work every week anymore. 
           We offer tree pruning and lawn mowing to keep your yard in shape always.
         </p>
       </div>
     </section>
-    <button class="service-button" onclick="window.location.href='bookings.html'">Request a Service</button>
+    <button class="service-button" onclick="window.location.href='bookings.html'" data-translate="services_button">Request a Service</button>
   </main>
 
-  <footer class="site-footer">
-  <p>&copy; KRS 2025</p>
-  <p>Follow us on our social media accounts</p>
+<footer class="site-footer">
+    <p data-translate="footer">© KRS 2025</p>
+    <p data-translate="followus">Follow us on our social media accounts</p>
 
-  <div class="social-icons">
-    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
-      <img src="media/instagram.png" alt="Instagram Logo">
-    </a>
-    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
-      <img src="media/facebook.png" alt="Facebook Logo">
-    </a>
-    <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
-      <img src="media/youtube.png" alt="YouTube Logo">
-    </a>
-  </div>
-</footer>
+    <div class="social-icons">
+      <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+        <img src="media/instagram.png" alt="Instagram Logo">
+      </a>
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+        <img src="media/facebook.png" alt="Facebook Logo">
+      </a>
+      <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+        <img src="media/youtube.png" alt="YouTube Logo">
+      </a>
+    </div>
+  </footer>
 
   <script src="files/java.js"></script> 
 </body>

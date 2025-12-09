@@ -7,96 +7,105 @@
     <title>KRS FORCE</title>
     <link rel="stylesheet" href="styles/SamarStyle2.css">
     <link rel="stylesheet" href="styles/ContactForm.css" />
+    <link rel="stylesheet" href="styles/map.css">
+    <script src="files/Translate.js"></script>
 </head>
 
 <body>
 
     <script src="./files/contactform.js"></script>
     <header class="site-header">
-        <!-- Logo left -->
-        <div class="logo-container">
-            <img src="media/logo.jpg" alt="KRS FORCE Logo">
-        </div>
+    <!-- Logo left -->
+    <div class="logo-container">
+      <img src="media/logo.jpg" alt="KRS FORCE Logo">
+    </div>
 
-        <!-- Centered main nav links -->
-        <nav class="nav-center">
-            <ul>
-                <li><a href="Home.html">Home</a></li>
-                <li><a href="Services.html">Services</a></li>
-                <li><a href="Bookings.html">Bookings</a></li>
-                <li><a href="Checkout.html">Checkout</a></li>
-                <li><a href="Faq.html">FAQ</a></li>
-                <li><a href="Feedback.html">Feedback</a></li>
-                <li><a href="Contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- Centered main nav links -->
+    <nav class="nav-center">
+      <ul>
+        <li><a href="Home.html" data-translate="home">Home</a></li>
+        <li><a href="Services.html" data-translate="services">Services</a></li>
+        <li><a href="Bookings.html" data-translate="bookings">Bookings</a></li>
+        <li><a href="Checkout.html" data-translate="checkout">Checkout</a></li>
+        <li><a href="Faq.html" data-translate="faq">FAQ</a></li>
+        <li><a href="Feedback.html" data-translate="feedback">Feedback</a></li>
+        <li><a href="Contact.html" data-translate="contact">Contact</a></li>
+      </ul>
+    </nav>
 
-        <!-- Right dropdowns -->
-        <nav class="nav-right">
-            <ul>
-                <li class="dropdown">
-                    <a href="#">Languages</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">English</a></li>
-                        <li><a href="#">French</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Mode</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Dark Mode</a></li>
-                        <li><a href="#">Light Mode</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Right dropdowns -->
+    <nav class="nav-right">
+      <ul>
+        <li class="dropdown">
+          <a href="#" data-translate="languages">Languages</a>
+          <ul class="dropdown-menu">
+            <li><a href="#" onclick="setLanguage('en')">English</a></li>
+            <li><a href="#" onclick="setLanguage('fr')">French</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" data-translate="mode">Mode</a>
+          <ul class="dropdown-menu">
+            <li><a href="#" data-translate="darkmode">Dark Mode</a></li>
+            <li><a href="#" data-translate="lightmode">Light Mode</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
     <div class="ContactTittle">
-        <h1>CONTACT US</h1>
+        <h1 data-translate="contact_title">CONTACT US</h1>
     </div>
 
     <main>
         <div class="Contact-form">
             <form>
-                <h1> Contact Us Form</h1>
+            <h1 data-translate="contact_form_title">Contact Us Form</h1>
 
-                <input type="text" class="firstName" placeholder="First Name" required>
-                <input type="text" class="lastName" placeholder="Last Name" required>
-                <input type="text" class="Email" placeholder="Email Name" required>
-                <input type="text" class="phoneNumber" placeholder="Phone Number" required>
-                <input type="text" class="Subject" placeholder="Subject">
+            <input type="text" class="firstName" placeholder="First Name" data-translate="first_name" required>
+            <input type="text" class="lastName" placeholder="Last Name" data-translate="last_name" required>
+            <input type="text" class="Email" placeholder="Email Address" data-translate="email_name" required>
+            <input type="text" class="phoneNumber" placeholder="Phone Number" data-translate="phone_number" required>
+            <input type="text" class="Subject" placeholder="Subject" data-translate="subject">
 
-                <textarea placeholder="Questions/Comments"></textarea>
-                <button placeholder="Send" class="button">Send Message</button>
+            <textarea placeholder="Questions/Comments" data-translate="questions_comments"></textarea>
+            <button class="button" data-translate="send_message">Send Message</button>
             </form>
         </div>
 
         <div class="Contact-info">
-            <h1>Contact Us</h1>
-            <p class="suggestions-ptag">We are open for any suggestions or just to have a chat</p>
-            <ul>
+            <h1 data-translate="contact_info_title">Contact Us</h1>
+            <p class="suggestions-ptag" data-translate="contact_info_intro">
+            We are open for any suggestions or just to have a chat
+            </p>
+                <ul>
                 <li>
                     <img src="./media/location-icon.png" alt="location-icon">
-                    <p class="Address"><span>Address:</span> 205 Humber College Blvd, Etobicoke, ON M9W 5L7</p>
+                    <p class="Address"><span data-translate="address_label">Address:</span> 205 Humber College Blvd, Etobicoke, ON M9W 5L7</p>
                 </li>
 
                 <li>
                     <img src="./media/phone-icon.png" alt="phone-icon">
-                    <p><span>Phone:</span> +1 647-555-0000</p>
+                    <p><span data-translate="phone_label">Phone:</span> +1 647-555-0000</p>
                 </li>
 
                 <li>
                     <img src="./media/email-icon.png" alt="email-icon">
-                    <p><span>Email:</span> KRSForce@gmail.com</p>
+                    <p><span data-translate="email_label">Email:</span> KRSForce@gmail.com</p>
                 </li>
             </ul>
         </div>
     </main>
-
+        <!-- Map Section -->
+        <div class="Map-Frame">
+            <h1 data-translate="map_title">LOCATION MAP</h1>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2740.3763202340847!2d-79.61218632399338!3d43.73078577109863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3b93427888b5%3A0xd290e7c099e8af71!2sHumber%20College%20North%20Campus%3A%20Parking%20Lot%20%2313!5e1!3m2!1sen!2sca!4v1761684425632!5m2!1sen!2sca" 
+            width="1000" height="500"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="Location"></iframe>
+        </div>
     <footer class="site-footer">
-        <p>&copy; KRS 2025</p>
-        <p>Follow us on our social media accounts</p>
+        <p data-translate="footer">© KRS 2025</p>
+        <p data-translate="followus">Follow us on our social media accounts</p>
 
         <div class="social-icons">
             <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">

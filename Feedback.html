@@ -6,39 +6,42 @@
   <title>KRS Services Feedback</title>
   <link rel="stylesheet" href="files/Feedback.css"> 
   <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+  <script src="files/Translate.js"></script>
 </head>
-<body>
   <header class="site-header">
+    <!-- Logo left -->
     <div class="logo-container">
       <img src="media/logo.jpg" alt="KRS FORCE Logo">
     </div>
 
+    <!-- Centered main nav links -->
     <nav class="nav-center">
       <ul>
-        <li><a href="Home.html">Home</a></li>
-        <li><a href="Services.html">Services</a></li>
-        <li><a href="Bookings.html">Bookings</a></li>
-        <li><a href="Checkout.html">Checkout</a></li>
-        <li><a href="Faq.html">FAQ</a></li>
-        <li><a href="Feedback.html">Feedback</a></li>
-        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="Home.html" data-translate="home">Home</a></li>
+        <li><a href="Services.html" data-translate="services">Services</a></li>
+        <li><a href="Bookings.html" data-translate="bookings">Bookings</a></li>
+        <li><a href="Checkout.html" data-translate="checkout">Checkout</a></li>
+        <li><a href="Faq.html" data-translate="faq">FAQ</a></li>
+        <li><a href="Feedback.html" data-translate="feedback">Feedback</a></li>
+        <li><a href="Contact.html" data-translate="contact">Contact</a></li>
       </ul>
     </nav>
 
+    <!-- Right dropdowns -->
     <nav class="nav-right">
       <ul>
         <li class="dropdown">
-          <a href="#">Languages</a>
+          <a href="#" data-translate="languages">Languages</a>
           <ul class="dropdown-menu">
-            <li><a href="#">English</a></li>
-            <li><a href="#">French</a></li>
+            <li><a href="#" onclick="setLanguage('en')">English</a></li>
+            <li><a href="#" onclick="setLanguage('fr')">French</a></li>
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#">Mode</a>
+          <a href="#" data-translate="mode">Mode</a>
           <ul class="dropdown-menu">
-            <li><a href="#">Dark Mode</a></li>
-            <li><a href="#">Light Mode</a></li>
+            <li><a href="#" data-translate="darkmode">Dark Mode</a></li>
+            <li><a href="#" data-translate="lightmode">Light Mode</a></li>
           </ul>
         </li>
       </ul>
@@ -50,37 +53,38 @@
       <aside class="info">
         <div class="brand">
           <img src="images/logo.jpg" alt="KRS Force Logo" class="logo">
-          <h1>KRS Services Feedback</h1>
-          <p>We would love to hear your opinion on how easy it was to navigate our website, and how satisfied you are with our services!</p>
+          <h1 data-translate="feedback_title">KRS Services Feedback</h1>
+          <p data-translate="feedback_intro">
+            We would love to hear your opinion on how easy it was to navigate our website, and how satisfied you are with our services!
+          </p>
         </div>
 
         <div class="hint">
-          <strong>Instructions:</strong>
-          <p>If you look to your right, you will see some fields. Please take the time to fill them out, to the best of your ability.</p>
-          <p>The first field is where you type your email adress.</p>
-          <p>Below that box, you will see some stars. The one furthest to the left means you aren't satisfied. The one to the right means that you are very satisfied. There are 5 stars in total.</p>
-          <p>The last field there is where you can type your comments and suggestions. If you liked or disliked something, or want to suggest improvements, you may do so in that field!</p>
+          <strong data-translate="instructions_title">Instructions:</strong>
+          <p data-translate="instructions_1">If you look to your right, you will see some fields. Please take the time to fill them out, to the best of your ability.</p>
+          <p data-translate="instructions_2">The first field is where you type your email address.</p>
+          <p data-translate="instructions_3">Below that box, you will see some stars. The one furthest to the left means you aren't satisfied. The one to the right means that you are very satisfied. There are 5 stars in total.</p>
+          <p data-translate="instructions_4">The last field there is where you can type your comments and suggestions. If you liked or disliked something, or want to suggest improvements, you may do so in that field!</p>
         </div>
 
-        <div class="foot-note">
-          "The Customer contentment with the quality of our services is what makes us here at KRS Services successful. Your opinion is valued."  
-          - Raymond Martin (CEO)
+        <div class="foot-note" data-translate="footnote">
+          "The Customer contentment with the quality of our services is what makes us here at KRS Services successful. Your opinion is valued." - Raymond Martin (CEO)
         </div>
       </aside>
 
       <div class="form-area">
-        <h2>Feedback Section</h2>
-        <p style="font-size:13px;">
+        <h2 data-translate="feedback_section">Feedback Section</h2>
+        <p style="font-size:13px;" data-translate="feedback_section_intro">
           Your opinion matters and will help us in improving our services.
           Every comment and rating is meticulously evaluated by both our customer relations executive Mr Samar Chughtai,
           and the Chief Executive Officer Mr Raymond Martin.
         </p>
 
         <form action="#" method="post">
-          <label for="email">Your Email Address</label>
+          <label for="email" data-translate="email_label">Your Email Address</label>
           <input id="email" name="email" type="email" placeholder="YourEmailHere@yahoo.com">
 
-          <label>Your rating of us</label>
+          <label data-translate="rating_label">Your rating of us</label>
           <div class="stars">
             <span class="star" data-value="1">★</span>
             <span class="star" data-value="2">★</span>
@@ -89,17 +93,17 @@
             <span class="star" data-value="5">★</span>
           </div>
 
-          <label for="comments">Below is where you type your feedback</label>
+          <label for="comments" data-translate="comments_label">Below is where you type your feedback</label>
           <textarea id="comments" name="comments" placeholder="What do you think about your overall experience?"></textarea>
 
-          <button type="submit">Submit Feedback</button>
+          <button type="submit" data-translate="submit_feedback">Submit Feedback</button>
         </form>
       </div>
     </div>
   </main>
   <footer class="site-footer">
-    <p>&copy; KRS 2025</p>
-    <p>Follow us on our social media accounts</p>
+    <p data-translate="footer">© KRS 2025</p>
+    <p data-translate="followus">Follow us on our social media accounts</p>
 
     <div class="social-icons">
       <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">

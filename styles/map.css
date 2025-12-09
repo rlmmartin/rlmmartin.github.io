@@ -1,0 +1,16 @@
+.Location {
+    border-radius: 10%;
+    border: 25px solid #d9e8ff;
+    box-shadow: 5px 5px 10px black;
+    
+}
+.Location:hover {
+    border-radius: 10%;
+    border: 25px solid blue;
+}
+
+.Map-Frame{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
